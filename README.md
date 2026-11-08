@@ -182,7 +182,7 @@ Keep the sum `(pool_size + max_overflow) x number of app processes` below Postgr
 **Database**
 
 - PostgreSQL 16+: run it with Docker Compose; use the official image
-- SQLAlchemy 2.0 (async) + asyncpg: ORM and the fastest async PostgreSQL driver; engine pooling as in the starter code
+- SQLAlchemy 2.0 (async) + asyncpg: ORM and the fastest async PostgreSQL driver; engine pooling is configured in `app/database.py`
 - Alembic (`alembic init -t async`): versioned schema migrations
 
 **Testing & tooling**
