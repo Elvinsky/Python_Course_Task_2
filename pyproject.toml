@@ -5,46 +5,39 @@ description = "Python Kick-Start, Task 2: Product Inventory Catalog API"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "fastapi>=0.115",
-    "uvicorn[standard]>=0.30",
-    "sqlalchemy[asyncio]>=2.0",
-    "asyncpg>=0.30",
-    "alembic>=1.13",
-    "pydantic-settings>=2.5",
+    "fastapi",
+    "uvicorn[standard]",
+    "sqlalchemy[asyncio]",
+    "asyncpg",
+    "alembic",
+    "pydantic-settings",
 ]
 
 [dependency-groups]
 dev = [
-    "pytest>=8",
-    "pytest-asyncio>=0.24",
-    "httpx>=0.27",
-    "aiosqlite>=0.20",
-    "ruff>=0.8",
-    "mypy>=1.13",
+    "pytest",
+    "pytest-asyncio",
+    "httpx",
+    "ruff",
+    "mypy",
 ]
 
-# ---------------------------------------------------------------------------
-# Tooling (already configured: this was Task 1)
-# ---------------------------------------------------------------------------
 [tool.ruff]
 line-length = 100
 target-version = "py312"
-extend-exclude = ["alembic/versions"]  # generated migration scripts
+extend-exclude = ["alembic/versions"]
 
 [tool.ruff.lint]
-# pycodestyle, pyflakes, isort, bugbear, pyupgrade, pep8-naming, bandit, async checks
 select = ["E", "F", "I", "B", "UP", "N", "S", "ASYNC"]
 
 [tool.ruff.lint.isort]
-# the local alembic/ folder must not be mistaken for the Alembic package
 known-third-party = ["alembic"]
 
 [tool.ruff.lint.flake8-bugbear]
-# FastAPI's Depends(...) / Query(...) in argument defaults are intentional
 extend-immutable-calls = ["fastapi.Depends", "fastapi.Query", "fastapi.Path", "fastapi.Body"]
 
 [tool.ruff.lint.per-file-ignores]
-"tests/*" = ["S101"]  # allow bare assert in tests
+"tests/*" = ["S101"]
 
 [tool.ruff.format]
 quote-style = "double"
