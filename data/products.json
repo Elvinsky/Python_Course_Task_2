@@ -1,0 +1,100 @@
+[
+  {
+    "sku": "KB-001",
+    "name": "Mechanical Keyboard",
+    "description": "75% layout, hot-swappable switches, USB-C",
+    "price": 89.9,
+    "stock": 42
+  },
+  {
+    "sku": "KB-002",
+    "name": "Wireless Keyboard",
+    "description": "Low-profile, Bluetooth 5, 3-device pairing",
+    "price": 59.0,
+    "stock": 65
+  },
+  {
+    "sku": "MS-001",
+    "name": "Ergonomic Mouse",
+    "description": "Vertical grip, 4000 DPI, rechargeable",
+    "price": 49.5,
+    "stock": 80
+  },
+  {
+    "sku": "MS-002",
+    "name": "Gaming Mouse",
+    "description": "Lightweight 58 g, 26000 DPI sensor",
+    "price": 69.99,
+    "stock": 35
+  },
+  {
+    "sku": "MN-001",
+    "name": "27\" 4K Monitor",
+    "description": "IPS panel, 60 Hz, USB-C 65 W power delivery",
+    "price": 379.0,
+    "stock": 18
+  },
+  {
+    "sku": "MN-002",
+    "name": "24\" Full HD Monitor",
+    "description": "IPS, 75 Hz, adjustable stand",
+    "price": 139.0,
+    "stock": 54
+  },
+  {
+    "sku": "HS-001",
+    "name": "Noise-Cancelling Headphones",
+    "description": "Over-ear, 30 h battery, multipoint",
+    "price": 199.0,
+    "stock": 27
+  },
+  {
+    "sku": "HS-002",
+    "name": "USB Headset",
+    "description": "Boom microphone, in-line controls",
+    "price": 39.9,
+    "stock": 110
+  },
+  {
+    "sku": "WC-001",
+    "name": "1080p Webcam",
+    "description": "Autofocus, built-in dual microphones",
+    "price": 54.0,
+    "stock": 73
+  },
+  {
+    "sku": "DK-001",
+    "name": "USB-C Docking Station",
+    "description": "11-in-1: HDMI, Ethernet, SD, 100 W passthrough",
+    "price": 129.0,
+    "stock": 22
+  },
+  {
+    "sku": "SS-001",
+    "name": "1 TB Portable SSD",
+    "description": "USB 3.2 Gen 2, up to 1050 MB/s",
+    "price": 94.0,
+    "stock": 48
+  },
+  {
+    "sku": "CB-001",
+    "name": "USB-C Cable 2 m",
+    "description": "240 W, braided, e-marked",
+    "price": 14.9,
+    "stock": 300
+  },
+  {
+    "sku": "LP-001",
+    "name": "Laptop Stand",
+    "description": "Aluminium, foldable, 6 height levels",
+    "price": 32.5,
+    "stock": 90
+  },
+  {
+    "sku": "DS-001",
+    "name": "Standing Desk Mat",
+    "description": "Anti-fatigue, 90 x 60 cm",
+    "price": 44.0,
+    "stock": 0
+  }
+]
