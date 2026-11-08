@@ -55,8 +55,7 @@ Common problems:
 
 3. Set up the virtual environment (section 1), then create a branch: `git switch -c solution`.
 4. Search for `TODO` to find everything you have to implement: `grep -rn "TODO" . --exclude-dir=.venv --exclude-dir=.git --exclude=README.md`.
-5. Commit small steps. The GitHub Actions workflow in `.github/workflows/ci.yml` runs the same checks as `make check`
-   on every push to your fork, so you can see your progress there too.
+5. Commit small steps and run `make check` before every push, so you always know which criteria are done.
 6. Keep the acceptance tests in `tests/acceptance/` unchanged: they are the definition of "done" for each
    acceptance criterion. Write your own tests next to them.
 
@@ -75,12 +74,12 @@ Build an unauthenticated REST API for a product inventory catalog on top of Post
 
 ## 5. What the template gives you, and what is yours
 
-The tooling from Task 1 (Ruff, Mypy `strict`, pytest, `Makefile`, CI) is already configured, and `uv.lock` is committed
+The tooling from Task 1 (Ruff, Mypy `strict`, pytest, `Makefile`) is already configured, and `uv.lock` is committed
 so everyone installs the same versions.
 
 | Path | State | Purpose |
 |---|---|---|
-| `pyproject.toml`, `uv.lock`, `.python-version`, `Makefile`, `.github/workflows/ci.yml` | provided | dependencies and tool configuration, `make` shortcuts, CI |
+| `pyproject.toml`, `uv.lock`, `.python-version`, `Makefile` | provided | dependencies and tool configuration, `make` shortcuts |
 | `compose.yaml`, `.env.example` | provided | local PostgreSQL 16 (`db` service) and the settings to connect to it |
 | `app/config.py` | provided | typed settings with `pydantic-settings` (`DATABASE_URL`, `ECHO_SQL`) |
 | `app/models.py` | provided | SQLAlchemy 2.0 model `Item` (`id`, `sku` unique, `name`, `description`, `price`, `stock`) |
@@ -223,7 +222,7 @@ Topics from the Python Kick-Start roadmap for this section:
 
 ## Definition of done
 
-- [ ] `make check` is green locally and in the CI of your fork
+- [ ] `make check` is green
 - [ ] `make migrate && make seed && make run` works against PostgreSQL, and every endpoint can be tried in `/docs`
 - [ ] Your migration is committed under `alembic/versions/`
 - [ ] Stretch: add pagination (`limit` / `offset`) and a `?q=` name filter to `GET /items`, with tests
